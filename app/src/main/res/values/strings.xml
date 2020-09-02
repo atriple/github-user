@@ -3,6 +3,14 @@
     <string name="item_name">John Doe</string>
     <string name="item_username">johndoe</string>
     <string name="item_location">Indonesia</string>
+    <string name="placeholder_company">Dicoding</string>
+    <string name="placeholder_location">Jakarta</string>
+    <string name="placeholder_repository">15</string>
+    <string name="repository">Repository</string>
+    <string name="follower">Follower</string>
+    <string name="placeholder_follower">20</string>
+    <string name="following">Following</string>
+    <string name="placeholder_following">25</string>
 
     <string-array name="username">
         <item>JakeWharton</item>

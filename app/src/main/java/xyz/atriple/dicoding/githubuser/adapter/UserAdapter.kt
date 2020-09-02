@@ -11,6 +11,8 @@ import kotlinx.android.synthetic.main.item_user.view.*
 import xyz.atriple.dicoding.githubuser.R
 
 class UserAdapter(private val mUser: List<User>) : RecyclerView.Adapter<UserAdapter.ViewHolder>() {
+    lateinit var onItemClickCallback: (User) -> Unit
+
     class ViewHolder(listItemView: View) : RecyclerView.ViewHolder(listItemView) {
 
     }
@@ -32,6 +34,7 @@ class UserAdapter(private val mUser: List<User>) : RecyclerView.Adapter<UserAdap
         holder.itemView.tv_item_name.text = user.name
         holder.itemView.tv_item_username.text = user.username
         holder.itemView.tv_item_location.text = user.location
+        holder.itemView.setOnClickListener{ onItemClickCallback(user) }
     }
 
     override fun getItemCount(): Int {

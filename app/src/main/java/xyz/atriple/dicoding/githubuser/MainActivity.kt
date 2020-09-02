@@ -1,5 +1,6 @@
 package xyz.atriple.dicoding.githubuser
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -17,6 +18,12 @@ class MainActivity : AppCompatActivity() {
         users = createUserList()
 
         val adapter = UserAdapter(users)
+        adapter.onItemClickCallback = { data ->
+            val detailUserIntent = Intent(this@MainActivity, DetailUserActivity::class.java)
+            detailUserIntent.putExtra("USER_DATA", data)
+            startActivity(detailUserIntent)
+        }
+
         rv_github_user.adapter = adapter
         rv_github_user.layoutManager = LinearLayoutManager(this)
     }
@@ -31,7 +38,7 @@ class MainActivity : AppCompatActivity() {
         val companies = resources.getStringArray(R.array.company)
         val followers = resources.getStringArray(R.array.followers)
         val following = resources.getStringArray(R.array.following)
-        val avatars = resources.getStringArray(R.array.avatar).map{
+        val avatars = resources.getStringArray(R.array.avatar).map {
             it.removePrefix("res/").removeSuffix(".png")
         }
 
@@ -40,9 +47,9 @@ class MainActivity : AppCompatActivity() {
                 User(
                     usernames[index],
                     names[index],
+                    companies[index],
                     locations[index],
                     repositories[index],
-                    companies[index],
                     followers[index],
                     following[index],
                     resources.getIdentifier(
