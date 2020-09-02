@@ -13,9 +13,7 @@ import xyz.atriple.dicoding.githubuser.R
 class UserAdapter(private val mUser: List<User>) : RecyclerView.Adapter<UserAdapter.ViewHolder>() {
     lateinit var onItemClickCallback: (User) -> Unit
 
-    class ViewHolder(listItemView: View) : RecyclerView.ViewHolder(listItemView) {
-
-    }
+    class ViewHolder(listItemView: View) : RecyclerView.ViewHolder(listItemView)
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val context = parent.context
@@ -40,6 +38,4 @@ class UserAdapter(private val mUser: List<User>) : RecyclerView.Adapter<UserAdap
     override fun getItemCount(): Int {
         return mUser.size
     }
-
-
 }

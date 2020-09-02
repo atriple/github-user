@@ -28,7 +28,7 @@ class MainActivity : AppCompatActivity() {
         rv_github_user.layoutManager = LinearLayoutManager(this)
     }
 
-    fun createUserList(): ArrayList<User> {
+    private fun createUserList(): ArrayList<User> {
         //TODO: This can be optimized (probably?)
         val users: ArrayList<User> = ArrayList()
         val usernames = resources.getStringArray(R.array.username)
