@@ -13,6 +13,7 @@ class DetailUserActivity : AppCompatActivity() {
 
         val userData = intent.getParcelableExtra<User>("USER_DATA")
 
+        title = userData.name
         tv_profile_name.text = userData.name
         tv_profile_username.text = userData.username
         tv_profile_company.text = userData.company

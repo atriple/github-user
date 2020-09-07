@@ -10,9 +10,9 @@
         android:id="@+id/img_profile_avatar"
         android:layout_width="120dp"
         android:layout_height="120dp"
-        android:layout_marginTop="44dp"
+        android:layout_marginTop="36dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.487"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:src="@android:color/darker_gray" />
@@ -23,8 +23,10 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:text="@string/item_name"
+        android:textSize="20sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@+id/img_profile_avatar"
-        app:layout_constraintHorizontal_bias="0.54"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="@+id/img_profile_avatar"
         app:layout_constraintTop_toBottomOf="@+id/img_profile_avatar" />
 
@@ -32,42 +34,52 @@
         android:id="@+id/tv_profile_username"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="4dp"
         android:text="@string/item_username"
+        android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="@+id/tv_profile_name"
-        app:layout_constraintHorizontal_bias="0.444"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="@+id/tv_profile_name"
         app:layout_constraintTop_toBottomOf="@+id/tv_profile_name" />
+
 
     <TextView
         android:id="@+id/tv_profile_company"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="4dp"
+        android:drawableStart="@drawable/ic_baseline_group_24"
+
+        android:drawablePadding="4dp"
         android:text="@string/placeholder_company"
-        app:layout_constraintEnd_toEndOf="@+id/tv_profile_username"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/tv_profile_username"
-        app:layout_constraintTop_toBottomOf="@+id/tv_profile_username" />
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/tv_profile_location"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/tv_profile_location"
+        app:layout_constraintTop_toBottomOf="@+id/tv_profile_location" />
 
     <TextView
         android:id="@+id/tv_profile_location"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="8dp"
+        android:drawableStart="@drawable/ic_baseline_location_on_24"
+        android:drawablePadding="4dp"
         android:text="@string/placeholder_location"
-        app:layout_constraintEnd_toEndOf="@+id/tv_profile_company"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/tv_profile_company"
-        app:layout_constraintTop_toTopOf="@+id/tv_profile_company" />
+
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/tv_profile_username"
+        app:layout_constraintStart_toStartOf="@+id/tv_profile_username"
+        app:layout_constraintTop_toBottomOf="@+id/tv_profile_username" />
 
     <TextView
         android:id="@+id/tv_profile_repository_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/repository"
+        android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="@+id/tv_profile_repository_value"
-        app:layout_constraintHorizontal_bias="0.45"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="@+id/tv_profile_repository_value"
         app:layout_constraintTop_toTopOf="@+id/tv_profile_follower_text" />
 
@@ -76,8 +88,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/placeholder_repository"
+        android:textSize="20sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toStartOf="@+id/tv_profile_follower_value"
-        app:layout_constraintHorizontal_bias="0.333"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/tv_profile_follower_value" />
 
@@ -85,10 +99,11 @@
         android:id="@+id/tv_profile_follower_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="4dp"
         android:text="@string/follower"
+        android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="@+id/tv_profile_follower_value"
-        app:layout_constraintHorizontal_bias="0.447"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="@+id/tv_profile_follower_value"
         app:layout_constraintTop_toBottomOf="@+id/tv_profile_follower_value" />
 
@@ -96,18 +111,21 @@
         android:id="@+id/tv_profile_follower_value"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="36dp"
+        android:layout_marginTop="40dp"
         android:text="@string/placeholder_follower"
-        app:layout_constraintEnd_toEndOf="@+id/tv_profile_location"
-        app:layout_constraintHorizontal_bias="0.562"
-        app:layout_constraintStart_toStartOf="@+id/tv_profile_location"
-        app:layout_constraintTop_toBottomOf="@+id/tv_profile_location" />
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/tv_profile_username"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/tv_profile_username"
+        app:layout_constraintTop_toBottomOf="@+id/tv_profile_company" />
 
     <TextView
         android:id="@+id/tv_profile_following_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/following"
+        android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="@+id/tv_profile_following_value"
         app:layout_constraintStart_toStartOf="@+id/tv_profile_following_value"
         app:layout_constraintTop_toTopOf="@+id/tv_profile_follower_text" />
@@ -116,13 +134,20 @@
         android:id="@+id/tv_profile_following_value"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="76dp"
         android:text="@string/placeholder_following"
+        android:textSize="20sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/tv_profile_follower_value"
         app:layout_constraintTop_toTopOf="@+id/tv_profile_follower_value" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.50121653" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
